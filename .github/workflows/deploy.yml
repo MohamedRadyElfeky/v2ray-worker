@@ -21,9 +21,6 @@ jobs:
     - name: Install Wrangler
       run: npm install -g wrangler@latest
 
-    - name: Build
-      run: npx wrangler build
-
     - name: Add Header
       run: |
         cp ${{ github.workspace }}/dist/worker.js ${{ github.workspace }}/dist/worker-original.js
@@ -31,5 +28,4 @@ jobs:
 
     - name: Deploy
       run: |
-        sed -i "s/KV_NAME/${{ secrets.KV_NAME }}/g" wrangler.toml
-        wrangler deploy --api-token ${{ secrets.CF_API_TOKEN }} --account-id ${{ secrets.CF_ACCOUNT_ID }}
+        wrangler publish --api-token ${{ secrets.CF_API_TOKEN }} --account-id ${{ secrets.CF_ACCOUNT_ID }}
