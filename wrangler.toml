@@ -3,19 +3,6 @@ main = "src/worker.ts"
 compatibility_date = "2024-05-29"
 compatibility_flags = ["nodejs_compat"]
 
-[build.upload]
-format = "service-worker"
-
-[build]
-# Add external packages
-external = [
-  "bcryptjs",
-  "js-yaml",
-  "crypto-js/sha224",
-  "crypto-js/enc-hex",
-  "uuid"
-]
-
 kv_namespaces = [
   { binding = "settings", id = "KV_NAME" }
 ]
