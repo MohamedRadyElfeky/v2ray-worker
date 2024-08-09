@@ -2,8 +2,8 @@ name = "sub"
 main = "src/worker.ts"
 compatibility_date = "2024-05-29"
 compatibility_flags = ["nodejs_compat"]
-account_id = "{{ secrets.ACCOUNT_ID }}"
-api_token = "{{ secrets.API_TOKEN }}"
+account_id = "{{ 9ea7757bdad70933837f82722bfdf291 }}"
+api_token = "{{ 7jfDfHxDdi9T3cXfQOY188Ye_639ws7KpuZxpzZ5 }}"
 
 [env.production]
 kv_namespaces = [
